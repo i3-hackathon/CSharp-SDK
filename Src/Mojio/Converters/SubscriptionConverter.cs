@@ -19,19 +19,19 @@ namespace Mojio.Converters
         protected override Subscription Create (Type objectType, JObject jsonObject, JsonSerializer serializer)
         {
             // default type
-            EventType eventType = EventType.Information;
+            EventType eventType = EventType.Unknown;
             if (jsonObject ["Event"] != null)
             if (!Enum.TryParse<EventType> (jsonObject ["Event"].ToString (), true, out eventType)) {
                 // TODO: log parsing error here.
-                eventType = EventType.Information;
+                eventType = EventType.Unknown;
             }
 
             switch (eventType) {
-            case EventType.HardAcceleration:
-            case EventType.HardBrake:
-            case EventType.HardLeft:
-            case EventType.HardRight:
-                return new HardSubscription ();
+            //case EventType.HardAcceleration:
+            //case EventType.HardBrake:
+            //case EventType.HardLeft:
+            //case EventType.HardRight:
+            //    return new HardSubscription ();
             case EventType.Speed:
                 return new SpeedSubscription ();
             case EventType.LowFuel:

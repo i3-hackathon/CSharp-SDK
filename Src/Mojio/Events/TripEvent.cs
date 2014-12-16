@@ -16,11 +16,11 @@ namespace Mojio.Events
         /// Initializes a new instance of the <see cref="TripEvent"/> class.
         /// </summary>
         public TripEvent()
-            : this(EventType.TripEvent)
+            : base()
         {
         }
 
-        public TripEvent(EventType type ) : base(type)
+        public TripEvent(EventType type) : base(type)
         {
         }
 

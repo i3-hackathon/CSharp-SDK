@@ -10,7 +10,7 @@ namespace Mojio.Events
     /// Battery event
     /// </summary>
     [CollectionNameAttribute(typeof(Event))]
-    public class BatteryEvent : TripEvent
+    public class BatteryEvent : Event
     {
         public BatteryEvent()
         {

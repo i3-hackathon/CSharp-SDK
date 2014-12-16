@@ -9,7 +9,7 @@ namespace Mojio.Converters
     /// <summary>
     /// 
     /// </summary>
-    public class EventConverter : Converter<Event>
+    /*public class EventConverter : Converter<Event>
     {
         /// <summary>Creates the specified object type.</summary>
         /// <param name="objectType">Type of the object.</param>
@@ -94,4 +94,5 @@ namespace Mojio.Converters
             }
         }
     }
+    */
 }
