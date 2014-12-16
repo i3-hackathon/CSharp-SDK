@@ -82,6 +82,7 @@
     <Compile Include="Events\PedestrianAssistantEvent.cs" />
     <Compile Include="Events\RPMEvent.cs" />
     <Compile Include="Events\SpeedEvent.cs" />
+    <Compile Include="Events\SpeedLimitDetectionEvent.cs" />
     <Compile Include="Events\TemperatureEvent.cs" />
     <Compile Include="Events\TowEvent.cs" />
     <Compile Include="Events\TripEvent.cs" />

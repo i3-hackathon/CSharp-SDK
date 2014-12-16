@@ -86,6 +86,28 @@ namespace Mojio.Events
         /// </summary>
         public int? RPM { get; set; }
 
+        /// <summary>
+        /// Max range based on fuel and battery level.
+        /// </summary>
+        /// <value>
+        /// The range in kilometers.
+        /// </value>
+        public int? Range { get; set; }
+
+        public int? AcceleratorPedal { get; set; }
+
+        public double? SteeringWheelAngle { get; set; }
+
+        public DrivingDirection? DrivingDirection { get; set; }
+
+        public bool? AirConditioningOn { get; set; }
+
+        public bool? CruiseControlEnabled { get; set; }
+
+        public Gears? Gear { get; set; }
+
+        public PassengerPresence? Passengers { get; set; }
+
         public object Clone()
         {
             return this.MemberwiseClone() as Vehicle;

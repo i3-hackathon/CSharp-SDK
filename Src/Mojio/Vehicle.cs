@@ -60,7 +60,7 @@ namespace Mojio
         SportPlus
     }
 
-    public enum CurrentGear
+    public enum Gears
     {
         Unknown,
         N,
@@ -181,7 +181,7 @@ namespace Mojio
         /// <value>
         /// The driving experience control status.
         /// </value>
-        public DrivingExperienceControlStatus LastDrivingExperienceControlStatus { get; set; }
+        public DrivingExperienceControlStatus LastDrivingExperienceControl { get; set; }
 
         /// <summary>
         /// Gets or sets the door ajar. [BMW Specific]
@@ -205,7 +205,7 @@ namespace Mojio
         /// <value>
         /// The current gear.
         /// </value>
-        public string LastGear { get; set; }
+        public Gears LastGear { get; set; }
 
         /// <summary>
         /// Gets or sets the last driving direction. [BMW Specific]
@@ -238,6 +238,22 @@ namespace Mojio
         /// The last orientation.
         /// </value>
         public Gyroscope LastOrientation { get; set; }
+
+        /// <summary>
+        /// Gets or sets the last battery level. [BMW Specific]
+        /// </summary>
+        /// <value>
+        /// The last battery level.
+        /// </value>
+        public int? LastBatteryLevel { get; set; }
+
+        /// <summary>
+        /// Gets or sets the expected range of the vehicle based on fuel/battery level. [BMW Specific]
+        /// </summary>
+        /// <value>
+        /// The expected range in km.
+        /// </value>
+        public int? LastRange { get; set; }
 
         /// <summary>
         /// Optional is ignition on?

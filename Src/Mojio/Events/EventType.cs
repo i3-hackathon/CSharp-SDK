@@ -60,6 +60,8 @@ namespace Mojio.Events
 
         Navigation = 117,
 
+        SpeedLimitDetected = 118,
+
         /// <summary>
         /// NOT AN ACTUAL EVENT
         /// </summary>
