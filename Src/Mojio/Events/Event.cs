@@ -141,15 +141,15 @@ namespace Mojio.Events
         /// </value>
         public Gyroscope Orientation { get; set; }
 
-        public int? BatteryLevel { get; set; }
+        public double? BatteryLevel { get; set; }
 
         public double? BatteryCurrent { get; set; }
 
-        public int? RainIntensity { get; set; }
+        public double? RainIntensity { get; set; }
 
-        public int? TemperatureInside { get; set; }
+        public double? TemperatureInside { get; set; }
 
-        public int? TemperatureOutside { get; set; }
+        public double? TemperatureOutside { get; set; }
 
         public object Clone()
         {

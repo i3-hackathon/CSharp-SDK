@@ -92,9 +92,9 @@ namespace Mojio.Events
         /// <value>
         /// The range in kilometers.
         /// </value>
-        public int? Range { get; set; }
+        public double? Range { get; set; }
 
-        public int? AcceleratorPedal { get; set; }
+        public double? AcceleratorPedal { get; set; }
 
         public double? SteeringWheelAngle { get; set; }
 

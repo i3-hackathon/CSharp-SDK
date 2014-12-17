@@ -221,7 +221,7 @@ namespace Mojio
         /// <value>
         /// The last accelerator pedal, in percentage.
         /// </value>
-        public int? LastAcceleratorPedal { get; set; }
+        public double? LastAcceleratorPedal { get; set; }
 
         /// <summary>
         /// Gets or sets the last passenger presence. [BMW Specific]
@@ -245,7 +245,7 @@ namespace Mojio
         /// <value>
         /// The last battery level.
         /// </value>
-        public int? LastBatteryLevel { get; set; }
+        public double? LastBatteryLevel { get; set; }
 
         /// <summary>
         /// Gets or sets the expected range of the vehicle based on fuel/battery level. [BMW Specific]
@@ -253,7 +253,7 @@ namespace Mojio
         /// <value>
         /// The expected range in km.
         /// </value>
-        public int? LastRange { get; set; }
+        public double? LastRange { get; set; }
 
         /// <summary>
         /// Optional is ignition on?
