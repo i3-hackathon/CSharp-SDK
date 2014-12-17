@@ -22,6 +22,6 @@ namespace Mojio.Events
             EventType = EventType.TurnSignal;
         }
 
-        public TurnSignals TurnSignals { get; set; }
+        public TurnSignals TurnSignal { get; set; }
     }
 }

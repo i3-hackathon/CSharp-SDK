@@ -12,5 +12,7 @@ namespace Mojio.Events
         {
             EventType = Events.EventType.ExperienceControl;
         }
+
+        public DrivingExperienceControlStatus DrivingExperienceControlStatus { get; set; }
     }
 }
