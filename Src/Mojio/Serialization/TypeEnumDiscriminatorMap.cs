@@ -72,7 +72,7 @@ namespace Mojio.Serialization
                 .Contains<PedestrianAssistantEvent>(EventType.PedestrianAssistant)
                 .Contains<TemperatureEvent>(EventType.Temperature)
                 .Contains<TurnSignalEvent>(EventType.TurnSignal)
-                .Contains<Event>(EventType.DoorStatus)
+                .Contains<DoorStatusEvent>(EventType.DoorStatus)
                 .Contains<TripEvent>(EventType.AttentionAssistant)
                 .Contains<SpeedLimitDetectedEvent>(EventType.SpeedLimitDetected)
                 .Contains<IgnitionEvent>(EventType.IgnitionOn)
