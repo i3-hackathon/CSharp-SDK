@@ -10,9 +10,9 @@ namespace Mojio.Events
     /// Battery event
     /// </summary>
     [CollectionNameAttribute(typeof(Event))]
-    public class BatteryEvent : Event
+    public class LowBatteryEvent : Event
     {
-        public BatteryEvent()
+        public LowBatteryEvent()
         {
             EventType = EventType.LowBattery;
         }

@@ -10,12 +10,12 @@ namespace Mojio.Events
     /// Fuel Event
     /// </summary>
     [CollectionNameAttribute(typeof(Event))]
-    public class FuelEvent : TripEvent
+    public class LowFuelEvent : TripEvent
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FuelEvent"/> class.
+        /// Initializes a new instance of the <see cref="LowFuelEvent"/> class.
         /// </summary>
-        public FuelEvent()
+        public LowFuelEvent()
         {
             EventType = Events.EventType.LowFuel;
         }

@@ -67,16 +67,6 @@ namespace Mojio.Events
         public double? Speed { get; set; }
 
         /// <summary>
-        /// Current acceleration
-        /// </summary>
-        public double? Acceleration { get; set; }
-
-        /// <summary>
-        /// Current deceleration
-        /// </summary>
-        public double? Deceleration { get; set; }
-
-        /// <summary>
         /// Current virtual odometer
         /// </summary>
         public double? Odometer { get; set; }
@@ -95,6 +85,8 @@ namespace Mojio.Events
         public double? Range { get; set; }
 
         public double? AcceleratorPedal { get; set; }
+
+        public double? BrakeTorque { get; set; }
 
         public double? SteeringWheelAngle { get; set; }
 

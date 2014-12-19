@@ -77,7 +77,7 @@ namespace Mojio.Serialization
                 .Contains<SpeedLimitDetectedEvent>(EventType.SpeedLimitDetected)
                 .Contains<IgnitionEvent>(EventType.IgnitionOn)
                 .Contains<IgnitionEvent>(EventType.IgnitionOff)
-                .Contains<BatteryEvent>(EventType.LowBattery)
+                .Contains<LowBatteryEvent>(EventType.LowBattery)
                 .Contains<FenceEvent>(EventType.FenceEntered)
                 .Contains<FenceEvent>(EventType.FenceExited)
                 .Contains<TripStatusEvent>(EventType.TripStatus)
@@ -90,7 +90,7 @@ namespace Mojio.Serialization
                 .Contains<AccelerometerEvent>(EventType.Accelerometer)
                 .Contains<HeadingChangeEvent>(EventType.HeadingChange)
                 .Contains<MileageEvent>(EventType.Mileage)
-                .Contains<FuelEvent>(EventType.LowFuel)
+                .Contains<LowFuelEvent>(EventType.LowFuel)
                 .Contains<HeartBeatEvent>(EventType.HeartBeat)
                 .Contains<RPMEvent>(EventType.RPM)
                 ;

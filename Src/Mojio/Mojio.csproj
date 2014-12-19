@@ -66,6 +66,7 @@
     <Compile Include="Events\BatteryEvent.cs" />
     <Compile Include="Events\BrakeAssistantEvent.cs" />
     <Compile Include="Events\DiagnosticEvent.cs" />
+    <Compile Include="Events\DoorStatusEvent.cs" />
     <Compile Include="Events\ExperienceControlEvent.cs" />
     <Compile Include="Events\Event.cs" />
     <Compile Include="Events\EventType.cs" />

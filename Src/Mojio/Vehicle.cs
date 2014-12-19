@@ -23,6 +23,16 @@ namespace Mojio
         US
     }
 
+    [Flags]
+    public enum Doors
+    {
+        None,
+        FrontLeft = 1 << 0,
+        FrontRight = 1 << 1,
+        RearLeft = 1 << 2,
+        RearRight = 1 << 3,
+    }
+
     public enum EngineType
     {
         Unknown,
@@ -189,7 +199,7 @@ namespace Mojio
         /// <value>
         /// The door ajar.
         /// </value>
-        public bool? DoorAjar { get; set; }
+        public Doors DoorsAjar { get; set; }
 
         /// <summary>
         /// Gets or sets the parking break engaged. [BMW Specific]
