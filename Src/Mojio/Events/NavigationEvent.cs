@@ -13,8 +13,6 @@ namespace Mojio.Events
             EventType = Events.EventType.Navigation;
         }
 
-        public Location DestinationLocation { get; set; }
-
-        public Address DestinationAddress { get; set; }
+        public String DestinationAddress { get; set; }
     }
 }
