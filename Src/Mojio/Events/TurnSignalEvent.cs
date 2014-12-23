@@ -8,6 +8,8 @@ namespace Mojio.Events
     [Flags]
     public enum TurnSignals
     {
+        Off = 0,
+
         Right = 1 << 0,
         Left = 1 << 1,
 
