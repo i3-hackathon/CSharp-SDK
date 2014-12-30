@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Mojio.Events
 {
+    [CollectionNameAttribute(typeof(Event))]
     public class SpeedLimitDetectedEvent : TripEvent
     {
         public SpeedLimitDetectedEvent()
