@@ -10,7 +10,7 @@ namespace Mojio.Events
     {
         public ParkingDistanceControlEvent()
         {
-            EventType = Events.EventType.ParkDistanceControl;
+            EventType = Events.EventType.ParkingDistanceControl;
         }
 
         public int? DistanceFront { get; set; }

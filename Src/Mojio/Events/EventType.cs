@@ -56,7 +56,7 @@ namespace Mojio.Events
 
         ExperienceControl = 115,
 
-        ParkDistanceControl = 116,
+        ParkingDistanceControl = 116,
 
         Navigation = 117,
 

@@ -68,7 +68,7 @@ namespace Mojio.Serialization
                 .Contains<ExperienceControlEvent>(EventType.ExperienceControl)
                 .Contains<LaneDepartureEvent>(EventType.LaneDeparture)
                 .Contains<NavigationEvent>(EventType.Navigation)
-                .Contains<ParkingDistanceControlEvent>(EventType.ParkDistanceControl)
+                .Contains<ParkingDistanceControlEvent>(EventType.ParkingDistanceControl)
                 .Contains<PedestrianAssistantEvent>(EventType.PedestrianAssistant)
                 .Contains<TemperatureEvent>(EventType.Temperature)
                 .Contains<TurnSignalEvent>(EventType.TurnSignal)
