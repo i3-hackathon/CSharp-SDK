@@ -49,7 +49,13 @@ namespace Mojio.Events
         /// </summary>
         Accelerometer Accelerometer { get; set; }
 
-
+        /// <summary>
+        /// Gets or sets the orientation.
+        /// </summary>
+        /// <value>
+        /// The gyroscope.
+        /// </value>
+        Gyroscope Orientation { get; set; }
     }
 
     /// <summary>
@@ -127,29 +133,23 @@ namespace Mojio.Events
         /// </summary>
         public bool? ConnectionLost { get; set; }
 
-        //TODO:: add GSM and GPS status to events.
-        ///// <summary>
-        ///// GSM Strength
-        ///// </summary>
-        //public double? GSMStrength { get; set; }
+        /// <summary>
+        /// Gets or sets the orientation. [BMW specific]
+        /// </summary>
+        /// <value>
+        /// The gyroscope.
+        /// </value>
+        public Gyroscope Orientation { get; set; }
 
-        ///// <summary>
-        ///// GPS Connection
-        ///// </summary>
-        //public double? GPSConnection { get; set; }
+        public double? BatteryLevel { get; set; }
 
-        ///// <summary>
-        ///// GPS Lost Time
-        ///// </summary>
-        //public double? GPSLostTime { get; set; }
+        public double? BatteryCurrent { get; set; }
 
-        ///// <summary>
-        ///// GPS State
-        ///// </summary>
-        //public GpsState? GpsState { get; set; }
+        public double? RainIntensity { get; set; }
 
-        /// <summary>Creates a new object that is a copy of the current instance.</summary>
-        /// <returns>A new object that is a copy of this instance.</returns>
+        public double? TemperatureInside { get; set; }
+
+        public double? TemperatureOutside { get; set; }
 
         public object Clone()
         {

@@ -7,6 +7,103 @@ using System.Threading.Tasks;
 
 namespace Mojio
 {
+    public enum GearboxType
+    {
+        Unknown,
+        Manual,
+        Automatic,
+        Steptronic,
+        Sequential,
+        DSG
+    }
+    public enum ModelCountryType
+    {
+        Unknown,
+        ECE,
+        US
+    }
+
+    [Flags]
+    public enum Doors
+    {
+        None,
+        FrontLeft = 1 << 0,
+        FrontRight = 1 << 1,
+        RearLeft = 1 << 2,
+        RearRight = 1 << 3,
+    }
+
+    public enum EngineType
+    {
+        Unknown,
+        Gasoline,
+        GasolineInjection,
+        Diesel,
+        DieselDirect,
+        Hybrid,
+        Electric
+    }
+
+    public class Gyroscope
+    {
+        public int X { get; set; }
+
+        public int Y { get; set; }
+
+        public int Z { get; set; }
+    }
+
+    public enum SteeringType
+    {
+        Unknown,
+        RHD,
+        LHD
+    }
+
+    public enum DrivingExperienceControlStatus
+    {
+        Unknown,
+        Comfort,
+        Eco,
+        Sport,
+        EcoPro,
+        SportPlus
+    }
+
+    public enum Gears
+    {
+        Unknown,
+        N,
+        P,
+        R,
+        D,
+        D1,
+        D2,
+        First, 
+        Second, 
+        Third, 
+        Fourth
+    }
+
+    public enum DrivingDirection
+    {
+        Unknown,
+        Stopped,
+        Forwards,
+        Backwards,
+    }
+
+    [Flags]
+    public enum PassengerPresence
+    {
+        Unknown,
+        FrontLeft = 1 << 0,
+        FrontRight = 1 << 1,
+        RearLeft = 1 << 2,
+        RearRight = 1 << 3,
+        RearCenter = 1 << 4,
+    }
+
     [Observable]
     public partial class Vehicle : GuidEntity, IOwner, IViewers
     {
@@ -47,6 +144,126 @@ namespace Mojio
         /// </summary>
         /// <value>The license plate.</value>
         public string LicensePlate { get; set; }
+        
+        /// <summary>
+        /// Gets or sets the series. [BMW Specific]
+        /// </summary>
+        /// <value>
+        /// The series.
+        /// </value>
+        public string ModelSeries { get; set; }
+
+        /// <summary>
+        /// Gets or sets the type of the model country. [BMW Specific]
+        /// </summary>
+        /// <value>
+        /// The type of the model country.
+        /// </value>
+        public ModelCountryType ModelCountryType { get; set; }
+
+        /// <summary>
+        /// Gets or sets the type of the gearbox. [BMW Specific]
+        /// </summary>
+        /// <value>
+        /// The type of the gearbox.
+        /// </value>
+        public GearboxType GearboxType { get; set; }
+
+        /// <summary>
+        /// Gets or sets the type of the engine. [BMW Specific]
+        /// </summary>
+        /// <value>
+        /// The type of the engine.
+        /// </value>
+        public EngineType EngineType { get; set; }
+
+        /// <summary>
+        /// Gets or sets the type of the steering. [BMW Specific]
+        /// </summary>
+        /// <value>
+        /// The type of the steering.
+        /// </value>
+        public SteeringType SteeringType { get; set; }
+
+        /// <summary>
+        /// Gets or sets the driving experience control status. [BMW Specific]
+        /// </summary>
+        /// <value>
+        /// The driving experience control status.
+        /// </value>
+        public DrivingExperienceControlStatus LastDrivingExperienceControl { get; set; }
+
+        /// <summary>
+        /// Gets or sets the door ajar. [BMW Specific]
+        /// </summary>
+        /// <value>
+        /// The door ajar.
+        /// </value>
+        public Doors DoorsAjar { get; set; }
+
+        /// <summary>
+        /// Gets or sets the parking break engaged. [BMW Specific]
+        /// </summary>
+        /// <value>
+        /// The parking break engaged.
+        /// </value>
+        public bool? ParkingBreakEngaged { get; set; }
+
+        /// <summary>
+        /// Gets or sets the current gear. [BMW Specific]
+        /// </summary>
+        /// <value>
+        /// The current gear.
+        /// </value>
+        public Gears LastGear { get; set; }
+
+        /// <summary>
+        /// Gets or sets the last driving direction. [BMW Specific]
+        /// </summary>
+        /// <value>
+        /// The last driving direction.
+        /// </value>
+        public DrivingDirection LastDrivingDirection { get; set; }
+
+        /// <summary>
+        /// Gets or sets the last accelerator pedal. [BMW Specific]
+        /// </summary>
+        /// <value>
+        /// The last accelerator pedal, in percentage.
+        /// </value>
+        public double? LastAcceleratorPedal { get; set; }
+
+        /// <summary>
+        /// Gets or sets the last passenger presence. [BMW Specific]
+        /// </summary>
+        /// <value>
+        /// The last passenger presence.
+        /// </value>
+        public PassengerPresence LastPassengerPresence { get; set; }
+
+        /// <summary>
+        /// Gets or sets the last orientation. [BMW Specific]
+        /// </summary>
+        /// <value>
+        /// The last orientation.
+        /// </value>
+        public Gyroscope LastOrientation { get; set; }
+
+        /// <summary>
+        /// Gets or sets the last battery level. [BMW Specific]
+        /// </summary>
+        /// <value>
+        /// The last battery level.
+        /// </value>
+        public double? LastBatteryLevel { get; set; }
+
+        /// <summary>
+        /// Gets or sets the expected range of the vehicle based on fuel/battery level. [BMW Specific]
+        /// </summary>
+        /// <value>
+        /// The expected range in km.
+        /// </value>
+        public double? LastRange { get; set; }
 
         /// <summary>
         /// Optional is ignition on?
@@ -74,7 +291,7 @@ namespace Mojio
         public double LastSpeed { get; set; }
 
         /// <summary>
-        /// Last known fuel level
+        /// Last known fuel level, in Liters.
         /// </summary>
         public double? FuelLevel { get; set; }
 
@@ -108,7 +325,7 @@ namespace Mojio
         public double? LastHeading { get; set; }
 
         /// <summary>
-        /// Last known Odometer
+        /// Last known Real Odometer Value
         /// </summary>
         public double? LastOdometer { get; set; }
 

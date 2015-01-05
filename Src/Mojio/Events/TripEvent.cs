@@ -16,11 +16,11 @@ namespace Mojio.Events
         /// Initializes a new instance of the <see cref="TripEvent"/> class.
         /// </summary>
         public TripEvent()
-            : this(EventType.TripEvent)
+            : base()
         {
         }
 
-        public TripEvent(EventType type ) : base(type)
+        public TripEvent(EventType type) : base(type)
         {
         }
 
@@ -67,17 +67,7 @@ namespace Mojio.Events
         public double? Speed { get; set; }
 
         /// <summary>
-        /// Current acceleration
-        /// </summary>
-        public double? Acceleration { get; set; }
-
-        /// <summary>
-        /// Current deceleration
-        /// </summary>
-        public double? Deceleration { get; set; }
-
-        /// <summary>
-        /// stop time
+        /// Current virtual odometer
         /// </summary>
         public double? Odometer { get; set; }
 
@@ -85,6 +75,30 @@ namespace Mojio.Events
         /// RPM
         /// </summary>
         public int? RPM { get; set; }
+
+        /// <summary>
+        /// Max range based on fuel and battery level.
+        /// </summary>
+        /// <value>
+        /// The range in kilometers.
+        /// </value>
+        public double? Range { get; set; }
+
+        public double? AcceleratorPedal { get; set; }
+
+        public double? BrakeTorque { get; set; }
+
+        public double? SteeringWheelAngle { get; set; }
+
+        public DrivingDirection? DrivingDirection { get; set; }
+
+        public bool? AirConditioningOn { get; set; }
+
+        public bool? CruiseControlEnabled { get; set; }
+
+        public Gears? Gear { get; set; }
+
+        public PassengerPresence? Passengers { get; set; }
 
         public object Clone()
         {
@@ -160,15 +174,13 @@ namespace Mojio.Events
             try {
                 string str = base.ToString () + ", TripEvent-> ";
 
-                str += string.Format("Time {0}, Lat {1}, Lng {2}, Speed {3}, RPM {4}, MaxRPM {5}, Heading {6}, Acceleration {7}, Deceleration {8}, Distance {9}, Fuel Level {10}, Fuel Efficiency {11}",
+                str += string.Format("Time {0}, Lat {1}, Lng {2}, Speed {3}, RPM {4}, MaxRPM {5}, Heading {6}, Distance {9}, Fuel Level {10}, Fuel Efficiency {11}",
                     this.Time,
                     this.Location.Lat,
                     this.Location.Lng, 
                     this.Speed,
                     this.RPM,
                     this.Heading,
-                    this.Acceleration,
-                    this.Deceleration,
                     this.Distance,
                     this.FuelLevel,
                     this.FuelEfficiency);

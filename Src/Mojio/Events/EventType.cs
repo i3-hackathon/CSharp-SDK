@@ -21,26 +21,6 @@ namespace Mojio.Events
         Message = 2,
 
         /// <summary>
-        /// information
-        /// </summary>
-        Information = 100,
-
-        /// <summary>
-        /// mojio on (device)
-        /// </summary>
-        MojioOn = 101,
-
-        /// <summary>
-        /// mojio idle (device)
-        /// </summary>
-        MojioIdle = 102,
-
-        /// <summary>
-        /// mojio awake (device)
-        /// </summary>
-        MojioWake = 103,
-
-        /// <summary>
         /// ignition on (device)
         /// </summary>
         IgnitionOn = 104,
@@ -51,19 +31,41 @@ namespace Mojio.Events
         IgnitionOff = 105,
 
         /// <summary>
-        /// mojio off (device)
+        /// The battery is charging, or uncharging
         /// </summary>
-        MojioOff = 106,
+        BatteryCharging = 106,
 
         /// <summary>
         /// low battery (device)
         /// </summary>
         LowBattery = 107,
 
+        Temperature = 108,
+
+        TurnSignal = 109,
+
+        DoorStatus = 110,
+
+        AttentionAssistant = 111,
+
+        PedestrianAssistant = 112,
+
+        LaneDeparture = 113,
+
+        BrakeAssistant = 114,
+
+        ExperienceControl = 115,
+
+        ParkingDistanceControl = 116,
+
+        Navigation = 117,
+
+        SpeedLimitDetected = 118,
+
         /// <summary>
-        /// GPS update (device)
+        /// NOT AN ACTUAL EVENT
         /// </summary>
-        TripEvent = 1005,
+        //TripEvent = 1005,
 
         /// <summary>
         /// fence enter (device)
@@ -81,9 +83,14 @@ namespace Mojio.Events
         TripStatus = 1010,
 
         /// <summary>
-        /// warning
+        /// The off status
         /// </summary>
-        Warning = 30000,
+        OffStatus = 1011,
+
+        /// <summary>
+        /// warning NOT AN ACTUAL EVENT
+        /// </summary>
+        //Warning = 30000,
 
         /// <summary>
         /// malfunction indicator light warning (device)
@@ -91,19 +98,9 @@ namespace Mojio.Events
         MILWarning = 30001,
 
         /// <summary>
-        /// connection lost (server)
+        /// alert NOT AN ACTUAL EVENT
         /// </summary>
-        ConnectionLost = 40000,
-
-        /// <summary>
-        /// alert
-        /// </summary>
-        Alert = 100000,
-
-        /// <summary>
-        /// accident (device)
-        /// </summary>
-        Accident = 100001,
+        //Alert = 100000,
 
         /// <summary>
         /// tow start (device)
@@ -116,26 +113,6 @@ namespace Mojio.Events
         TowStop = 100003,
 
         /// <summary>
-        /// hard acceleration (device)
-        /// </summary>
-        HardAcceleration = 100004,
-
-        /// <summary>
-        /// hard brake (device)
-        /// </summary>
-        HardBrake = 100005,
-
-        /// <summary>
-        /// hard right (device)
-        /// </summary>
-        HardRight = 100006,
-
-        /// <summary>
-        /// hard left (device)
-        /// </summary>
-        HardLeft = 100007,
-        
-        /// <summary>
         /// device-defined excessive speed (device)
         /// </summary>
         Speed = 100008,
@@ -146,29 +123,9 @@ namespace Mojio.Events
         Diagnostic = 100009,
 
         /// <summary>
-        /// trip status (device)
-        /// </summary>
-        OffStatus = 100010,
-
-        /// <summary>
-        /// park
-        /// </summary>
-        Park = 100011,
-
-        /// <summary>
         /// acceleromter
         /// </summary>
         Accelerometer = 100012,
-
-        /// <summary>
-        /// acceleration
-        /// </summary>
-        Acceleration = 100013,
-
-        /// <summary>
-        /// deceleration
-        /// </summary>
-        Deceleration = 100014,
 
         /// <summary>
         /// HeadingChange
@@ -191,34 +148,15 @@ namespace Mojio.Events
         RPM = 100018,
 
         /// <summary>
-        /// Movement Start
-        /// </summary>
-        MovementStart = 100019,
-
-        /// <summary>
-        /// Movement Stop
-        /// </summary>
-        MovementStop = 100020,
-
-        /// <summary>
         /// HeartBeat
         /// </summary>
         HeartBeat = 100021,
-
-        /// <summary>
-        /// Device Diagnostic Data
-        /// </summary>
-        DeviceDiagnostic = 100022,
 
         /// <summary>
         /// Vehicle Idle Event
         /// </summary>
         IdleEvent = 100023,
 
-        /// <summary>
-        /// Pre Sleep Event
-        /// </summary
-        PreSleepWarning = 100024,
         /// <summary>
         /// Unknown
         /// </summary>

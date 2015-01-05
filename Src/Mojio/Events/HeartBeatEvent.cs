@@ -32,20 +32,16 @@ namespace Mojio.Events
         /// </summary>
         public string VIN { get; set; }
 
-        /// <summary>
-        /// Main Firmware version
-        /// </summary>
-        public string MainFirmware { get; set; }
+        public string ModelSeries { get; set; }
 
-        /// <summary>
-        /// OBD Firmware version
-        /// </summary>
-        public string OBDFirmware { get; set; }
+        public ModelCountryType? ModelCountryType { get; set; }
 
-        /// <summary>
-        /// Profile configuration name
-        /// </summary>
-        public string ProfileName { get; set; }
+        public GearboxType? GearboxType { get; set; }
 
+        public EngineType? EngineType { get; set; }
+
+        public SteeringType? SteeringType { get; set; }
+
+        public DrivingExperienceControlStatus? DrivingExperienceControl { get; set; }
     }
 }
