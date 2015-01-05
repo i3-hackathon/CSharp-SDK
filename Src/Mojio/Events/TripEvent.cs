@@ -6,6 +6,17 @@ using System.Text;
 
 namespace Mojio.Events
 {
+    public class WheelSpeed
+    {
+        public double FrontRight { get; set; }
+
+        public double FrontLeft { get; set; }
+
+        public double RearRight { get; set; }
+
+        public double RearLeft { get; set; }
+    }
+
     /// <summary>
     /// trip status event
     /// </summary>
@@ -99,6 +110,8 @@ namespace Mojio.Events
         public Gears? Gear { get; set; }
 
         public PassengerPresence? Passengers { get; set; }
+
+        public WheelSpeed WheelSpeed { get; set; }
 
         public object Clone()
         {
