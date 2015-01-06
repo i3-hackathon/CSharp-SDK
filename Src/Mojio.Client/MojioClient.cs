@@ -50,9 +50,9 @@ namespace Mojio.Client
         [Obsolete("Sandbox server has been deprecated.  Please use the Live environment, with your sandbox secret key.")]
         public const string Sandbox = Live;
 
-        public const string Live = "https://bmw.api.moj.io/v1";
-        public const string OAuthAuthorize = "https://bmw.api.moj.io/oauth2/authorize";
-        public const string OAuthToken = "https://bmw.api.moj.io/oauth2/token";
+        public const string Live = "https://data.api.hackthedrive.com/v1";
+        public const string OAuthAuthorize = "https://data.api.hackthedrive.com/oauth2/authorize";
+        public const string OAuthToken = "https://data.api.hackthedrive.com/oauth2/token";
 
         public int PageSize { get; set; }
 
