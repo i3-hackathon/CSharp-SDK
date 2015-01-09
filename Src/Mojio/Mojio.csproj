@@ -77,7 +77,7 @@
     <Compile Include="Events\IdleEvent.cs" />
     <Compile Include="Events\IgnitionEvent.cs" />
     <Compile Include="Events\LaneDepartureEvent.cs" />
-    <Compile Include="Events\MileageEvent.cs" />
+    <Compile Include="Events\AccidentEvent.cs" />
     <Compile Include="Events\NavigationEvent.cs" />
     <Compile Include="Events\ParkingDistanceControlEvent.cs" />
     <Compile Include="Events\PedestrianAssistantEvent.cs" />
