@@ -133,9 +133,9 @@ namespace Mojio.Events
         HeadingChange = 100015,
 
         /// <summary>
-        /// Mileage
+        /// Accident
         /// </summary>
-        Mileage = 100016,
+        Accident = 100016,
 
         /// <summary>
         /// LowFuel

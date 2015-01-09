@@ -10,14 +10,14 @@ namespace Mojio.Events
     /// 
     /// </summary>
     [CollectionNameAttribute(typeof(Event))]
-    public class MileageEvent : TripEvent
+    public class AccidentEvent : TripEvent
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="MileageEvent"/> class.
+        /// Initializes a new instance of the <see cref="AccidentEvent"/> class.
         /// </summary>
-        public MileageEvent()
+        public AccidentEvent()
         {
-            EventType = Events.EventType.Mileage;
+            EventType = Events.EventType.Accident;
         }
     }
 }

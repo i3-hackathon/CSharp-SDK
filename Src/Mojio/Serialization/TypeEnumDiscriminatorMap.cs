@@ -89,7 +89,7 @@ namespace Mojio.Serialization
                 .Contains<OffStatusEvent>(EventType.OffStatus)
                 .Contains<AccelerometerEvent>(EventType.Accelerometer)
                 .Contains<HeadingChangeEvent>(EventType.HeadingChange)
-                .Contains<MileageEvent>(EventType.Mileage)
+                .Contains<AccidentEvent>(EventType.Accident)
                 .Contains<LowFuelEvent>(EventType.LowFuel)
                 .Contains<HeartBeatEvent>(EventType.HeartBeat)
                 .Contains<RPMEvent>(EventType.RPM)
