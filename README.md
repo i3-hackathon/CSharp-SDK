@@ -1,4 +1,4 @@
-**NOTICE:** This fork is modified to work in conjunction with the [BMW i3 Hackathon developer center](https://data.hackthedrive.com/) ONLY.  If you are not apart of the BMW i3 hackathon, please refer to [Mojio.Client](https://github.com/mojio/Mojio.Client) project instead.
+**NOTICE:** This fork is modified to work in conjunction with the [BMW i3 Hackathon developer center](http://data.hackthedrive.com/) ONLY.  If you are not apart of the BMW i3 hackathon, please refer to [Mojio.Client](https://github.com/mojio/Mojio.Client) project instead.
 
 BMW.Client
 ============
@@ -23,7 +23,7 @@ Download or checkout the BMW.Client.  You will then need to include the Mojio (S
 Getting Started
 ===============
 
-To begin developing with our client, you will need your very own application ID and secret key.  First you will need to create an account and login to our [developer center](https://data.hackthedrive.com/). 
+To begin developing with our client, you will need your very own application ID and secret key.  First you will need to create an account and login to our [developer center](http://data.hackthedrive.com/). 
 
 Once you have logged in, you can create a new Application.  From here, you will want to copy the Application ID and the Secret Key, these will be required to initialize the BMW.Client.
 
