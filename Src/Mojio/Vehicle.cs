@@ -201,6 +201,8 @@ namespace Mojio
         /// </value>
         public Doors DoorsAjar { get; set; }
 
+        public ChargingStatus? ChargingStatus { get; set; }
+
         /// <summary>
         /// Gets or sets the parking break engaged. [BMW Specific]
         /// </summary>
